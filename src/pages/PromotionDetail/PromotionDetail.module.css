@@ -1,0 +1,70 @@
+.cardImg {
+  position: relative;
+}
+
+.brandImg {
+  width: 100%;
+  border-bottom-left-radius: 25%;
+}
+
+.backButton {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  border: none;
+  background: transparent;
+}
+
+.brandIcon {
+  position: absolute;
+  height: 55px;
+  width: 55px !important;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  left: 1px;
+  bottom: 1px;
+}
+
+.textContainer {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textContainer > h1 {
+  margin: 10px auto;
+}
+
+.textContainer > p {
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--black);
+  word-wrap: break-word;
+}
+
+.title {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+
+  color: var(--black);
+  text-align: left;
+}
+
+.button {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  border: none;
+  background: #f40000;
+  border-radius: 28px;
+  padding: 10px 20px;
+}
