@@ -1,0 +1,41 @@
+.container {
+  margin-left: 30px;
+}
+
+.brandImg {
+  width: 295px !important;
+  height: 247px !important;
+  border-radius: 20px 20px 20px 100px;
+}
+
+.cardImg {
+  position: relative;
+  width: min-content;
+}
+
+.expDate {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  right: 8px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  z-index: 11;
+}
+
+.brandIcon {
+  position: absolute;
+  height: 55px;
+  width: 55px !important;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  left: 1px;
+  bottom: 1px;
+}
+
+.title {
+  margin: 10px auto;
+}
