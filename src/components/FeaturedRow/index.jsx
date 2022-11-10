@@ -5,8 +5,10 @@ import axios from "axios";
 
 import styles from "./FeaturedRow.module.css";
 import PromotionCard from "../PromotionCard";
+import searchLogo from "../../assets/search_logo.png";
 
 const FeaturedRow = () => {
+  const [search, setSearch] = useState("");
   const [thumbs, setThumbs] = useState([]);
   const [brands, setBrands] = useState([]);
 
@@ -28,8 +30,34 @@ const FeaturedRow = () => {
         setBrands(res.data);
       });
   }, []);
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const searchBrand = (e) => {
+    if (e.key === "Enter") {
+      setThumbs(
+        thumbs.filter((brand) => {
+          return brand.Name.toLowerCase().includes(search.toLowerCase());
+        })
+      );
+    }
+  };
+
   return (
     <div>
+      <div className={styles.searchContainer}>
+        <span>
+          <img src={searchLogo} alt="searcher" />
+        </span>
+        <input
+          type="text"
+          placeholder="Fırsat Bul"
+          onChange={handleSearch}
+          onKeyDown={searchBrand}
+        />
+      </div>
       <Carousel
         showStatus={false}
         showArrows={false}
